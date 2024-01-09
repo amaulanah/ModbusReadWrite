@@ -1,7 +1,7 @@
 ﻿Imports EasyModbus
 Imports System.Data.OleDb
 
-Public Class Form1
+Public Class ModbusTCP
     Dim Conn As OleDbConnection
     Dim Da As OleDbDataAdapter
     Dim Ds As DataSet

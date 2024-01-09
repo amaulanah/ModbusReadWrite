@@ -33,7 +33,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.WinFormsApp1.Form2
+            Me.MainForm = Global.WinFormsApp1.ModbusConnectionSelectors
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

@@ -1,6 +1,6 @@
 ﻿Imports EasyModbus
 
-Public Class Form3
+Public Class ModbusSerial
     Dim ComEror
     Dim ModbusClient
     Dim easymodbus As New EasyModbus.ModbusClient
