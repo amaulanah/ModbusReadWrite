@@ -39,6 +39,8 @@ Partial Class ModbusSerial
         Label1 = New Label()
         WriteValue = New TextBox()
         WriteRegister = New TextBox()
+        CheckBox1 = New CheckBox()
+        CheckBox2 = New CheckBox()
         SuspendLayout()
         ' 
         ' ReadStatus
@@ -52,7 +54,7 @@ Partial Class ModbusSerial
         ' WriteStatus
         ' 
         WriteStatus.AutoSize = True
-        WriteStatus.Location = New Point(119, 155)
+        WriteStatus.Location = New Point(114, 168)
         WriteStatus.Name = "WriteStatus"
         WriteStatus.Size = New Size(0, 20)
         WriteStatus.TabIndex = 33
@@ -112,7 +114,7 @@ Partial Class ModbusSerial
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(311, 151)
+        Button2.Location = New Point(311, 168)
         Button2.Name = "Button2"
         Button2.Size = New Size(94, 29)
         Button2.TabIndex = 26
@@ -121,7 +123,7 @@ Partial Class ModbusSerial
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(19, 151)
+        Button1.Location = New Point(13, 164)
         Button1.Name = "Button1"
         Button1.Size = New Size(94, 29)
         Button1.TabIndex = 25
@@ -156,7 +158,7 @@ Partial Class ModbusSerial
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(13, 104)
+        Label2.Location = New Point(11, 104)
         Label2.Name = "Label2"
         Label2.Size = New Size(45, 20)
         Label2.TabIndex = 21
@@ -185,11 +187,33 @@ Partial Class ModbusSerial
         WriteRegister.Size = New Size(125, 27)
         WriteRegister.TabIndex = 18
         ' 
-        ' Form3
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Location = New Point(18, 136)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(124, 24)
+        CheckBox1.TabIndex = 35
+        CheckBox1.Text = "Multiple Read"
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.AutoSize = True
+        CheckBox2.Location = New Point(311, 138)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(110, 24)
+        CheckBox2.TabIndex = 36
+        CheckBox2.Text = "Single Read"
+        CheckBox2.UseVisualStyleBackColor = True
+        ' 
+        ' ModbusSerial
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(555, 407)
+        Controls.Add(CheckBox2)
+        Controls.Add(CheckBox1)
         Controls.Add(ReadStatus)
         Controls.Add(WriteStatus)
         Controls.Add(ErrorText)
@@ -207,7 +231,7 @@ Partial Class ModbusSerial
         Controls.Add(Label1)
         Controls.Add(WriteValue)
         Controls.Add(WriteRegister)
-        Name = "Form3"
+        Name = "ModbusSerial"
         Text = "MODBUS SERIAL"
         ResumeLayout(False)
         PerformLayout()
@@ -230,4 +254,6 @@ Partial Class ModbusSerial
     Friend WithEvents Label1 As Label
     Friend WithEvents WriteValue As TextBox
     Friend WithEvents WriteRegister As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
 End Class

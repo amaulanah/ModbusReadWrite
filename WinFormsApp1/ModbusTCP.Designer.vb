@@ -43,14 +43,14 @@ Partial Class ModbusTCP
         ' 
         ' WriteRegister
         ' 
-        WriteRegister.Location = New Point(128, 59)
+        WriteRegister.Location = New Point(107, 59)
         WriteRegister.Name = "WriteRegister"
         WriteRegister.Size = New Size(125, 27)
         WriteRegister.TabIndex = 0
         ' 
         ' WriteValue
         ' 
-        WriteValue.Location = New Point(128, 102)
+        WriteValue.Location = New Point(107, 102)
         WriteValue.Name = "WriteValue"
         WriteValue.Size = New Size(125, 27)
         WriteValue.TabIndex = 1
@@ -58,7 +58,7 @@ Partial Class ModbusTCP
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(27, 61)
+        Label1.Location = New Point(6, 61)
         Label1.Name = "Label1"
         Label1.Size = New Size(103, 20)
         Label1.TabIndex = 2
@@ -67,7 +67,7 @@ Partial Class ModbusTCP
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(29, 104)
+        Label2.Location = New Point(8, 104)
         Label2.Name = "Label2"
         Label2.Size = New Size(45, 20)
         Label2.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class ModbusTCP
         ' 
         ' ReadRegister
         ' 
-        ReadRegister.Location = New Point(434, 62)
+        ReadRegister.Location = New Point(383, 62)
         ReadRegister.Name = "ReadRegister"
         ReadRegister.Size = New Size(125, 27)
         ReadRegister.TabIndex = 4
@@ -83,7 +83,7 @@ Partial Class ModbusTCP
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(327, 62)
+        Label3.Location = New Point(276, 62)
         Label3.Name = "Label3"
         Label3.Size = New Size(101, 20)
         Label3.TabIndex = 5
@@ -92,7 +92,7 @@ Partial Class ModbusTCP
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(327, 109)
+        Label4.Location = New Point(276, 109)
         Label4.Name = "Label4"
         Label4.Size = New Size(54, 20)
         Label4.TabIndex = 6
@@ -100,7 +100,7 @@ Partial Class ModbusTCP
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(35, 151)
+        Button1.Location = New Point(14, 151)
         Button1.Name = "Button1"
         Button1.Size = New Size(94, 29)
         Button1.TabIndex = 8
@@ -109,7 +109,7 @@ Partial Class ModbusTCP
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(327, 151)
+        Button2.Location = New Point(276, 151)
         Button2.Name = "Button2"
         Button2.Size = New Size(94, 29)
         Button2.TabIndex = 9
@@ -118,7 +118,7 @@ Partial Class ModbusTCP
         ' 
         ' Button3
         ' 
-        Button3.Location = New Point(112, 12)
+        Button3.Location = New Point(91, 12)
         Button3.Name = "Button3"
         Button3.Size = New Size(165, 29)
         Button3.TabIndex = 10
@@ -127,7 +127,7 @@ Partial Class ModbusTCP
         ' 
         ' Button4
         ' 
-        Button4.Location = New Point(327, 12)
+        Button4.Location = New Point(276, 12)
         Button4.Name = "Button4"
         Button4.Size = New Size(165, 29)
         Button4.TabIndex = 11
@@ -137,7 +137,7 @@ Partial Class ModbusTCP
         ' ConnectionStatus
         ' 
         ConnectionStatus.AutoSize = True
-        ConnectionStatus.Location = New Point(29, 196)
+        ConnectionStatus.Location = New Point(8, 196)
         ConnectionStatus.Name = "ConnectionStatus"
         ConnectionStatus.Size = New Size(162, 20)
         ConnectionStatus.TabIndex = 12
@@ -145,7 +145,7 @@ Partial Class ModbusTCP
         ' 
         ' ReadLength
         ' 
-        ReadLength.Location = New Point(434, 109)
+        ReadLength.Location = New Point(383, 109)
         ReadLength.Name = "ReadLength"
         ReadLength.Size = New Size(125, 27)
         ReadLength.TabIndex = 13
@@ -155,15 +155,15 @@ Partial Class ModbusTCP
         ListBox1.FormattingEnabled = True
         ListBox1.ItemHeight = 20
         ListBox1.Items.AddRange(New Object() {"Waiting for Read Command..."})
-        ListBox1.Location = New Point(27, 252)
+        ListBox1.Location = New Point(6, 252)
         ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(532, 144)
+        ListBox1.Size = New Size(502, 144)
         ListBox1.TabIndex = 14
         ' 
         ' ErrorText
         ' 
         ErrorText.AutoSize = True
-        ErrorText.Location = New Point(27, 223)
+        ErrorText.Location = New Point(6, 223)
         ErrorText.Name = "ErrorText"
         ErrorText.Size = New Size(124, 20)
         ErrorText.TabIndex = 15
@@ -172,7 +172,7 @@ Partial Class ModbusTCP
         ' WriteStatus
         ' 
         WriteStatus.AutoSize = True
-        WriteStatus.Location = New Point(135, 155)
+        WriteStatus.Location = New Point(114, 155)
         WriteStatus.Name = "WriteStatus"
         WriteStatus.Size = New Size(0, 20)
         WriteStatus.TabIndex = 16
@@ -180,16 +180,16 @@ Partial Class ModbusTCP
         ' ReadStatus
         ' 
         ReadStatus.AutoSize = True
-        ReadStatus.Location = New Point(427, 155)
+        ReadStatus.Location = New Point(406, 155)
         ReadStatus.Name = "ReadStatus"
         ReadStatus.Size = New Size(0, 20)
         ReadStatus.TabIndex = 17
         ' 
-        ' Form1
+        ' ModbusTCP
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(591, 408)
+        ClientSize = New Size(516, 429)
         Controls.Add(ReadStatus)
         Controls.Add(WriteStatus)
         Controls.Add(ErrorText)
@@ -207,7 +207,7 @@ Partial Class ModbusTCP
         Controls.Add(Label1)
         Controls.Add(WriteValue)
         Controls.Add(WriteRegister)
-        Name = "Form1"
+        Name = "ModbusTCP"
         Text = "MODBUS TCP/IP"
         ResumeLayout(False)
         PerformLayout()

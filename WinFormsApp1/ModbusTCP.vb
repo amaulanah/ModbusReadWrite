@@ -9,7 +9,7 @@ Public Class ModbusTCP
 
     Dim ComError
     Dim ModbusClient
-    Dim modClient As New EasyModbus.ModbusClient
+    Dim easymodbus As New EasyModbus.ModbusClient
 
     Sub ConnectionDatabase()
         DBDir = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database11.accdb"
@@ -22,12 +22,12 @@ Public Class ModbusTCP
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        modClient.IPAddress = "127.0.0.1"
-        modClient.Port = "502"
+        easymodbus.IPAddress = "127.0.0.1"
+        easymodbus.Port = "502"
         ComError = 0
 
         Try
-            modClient.Connect()
+            easymodbus.Connect()
             ConnectionStatus.Text = "Connection Established"
         Catch ex As Exception
             ErrorText.Text = ex.Message
@@ -37,7 +37,7 @@ Public Class ModbusTCP
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
-            modClient.Disconnect()
+            easymodbus.Disconnect()
             ConnectionStatus.Text = "Connection Aborted"
         Catch ex As Exception
             ErrorText.Text = ex.Message
@@ -45,8 +45,10 @@ Public Class ModbusTCP
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim array() As Integer = {1, 2, 3, 4, 5}
         Try
-            modClient.WriteSingleRegister(Convert.ToInt32(WriteRegister.Text), Convert.ToInt32(WriteValue.Text))
+            easymodbus.WriteSingleRegister(Convert.ToInt32(WriteRegister.Text), Convert.ToInt32(WriteValue.Text))
+            'easymodbus.WriteMultipleRegisters(20, array)
             WriteStatus.Text = "Write Succeed"
         Catch ex As Exception
             ErrorText.Text = ex.Message
@@ -62,7 +64,7 @@ Public Class ModbusTCP
         Ds.Clear()
         Da.Fill(Ds, "Table1")
         Try
-            DataList = modClient.ReadHoldingRegisters(Convert.ToInt16(ReadRegister.Text), Convert.ToInt16(ReadLength.Text))
+            DataList = easymodbus.ReadHoldingRegisters(Convert.ToInt16(ReadRegister.Text), Convert.ToInt16(ReadLength.Text))
             ListBox1.Items.Clear()
             'Dim combinedUniqueNames = DataList.Union(Ds.Tables("Table1")).Distinct().ToArray()
             If (DataList.Length >= 1) Then
