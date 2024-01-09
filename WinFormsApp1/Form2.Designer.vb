@@ -42,7 +42,7 @@ Partial Class Form2
         Button2.Name = "Button2"
         Button2.Size = New Size(79, 29)
         Button2.TabIndex = 1
-        Button2.Text = "TCP"
+        Button2.Text = "TCP/IP"
         Button2.UseVisualStyleBackColor = True
         ' 
         ' Label1
@@ -63,7 +63,7 @@ Partial Class Form2
         Controls.Add(Button2)
         Controls.Add(Button1)
         Name = "Form2"
-        Text = "Form2"
+        Text = "MODBUS CONNECTION SELECTOR"
         ResumeLayout(False)
         PerformLayout()
     End Sub

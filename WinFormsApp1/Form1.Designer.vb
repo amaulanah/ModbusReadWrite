@@ -208,7 +208,7 @@ Partial Class Form1
         Controls.Add(WriteValue)
         Controls.Add(WriteRegister)
         Name = "Form1"
-        Text = "Form1"
+        Text = "MODBUS TCP/IP"
         ResumeLayout(False)
         PerformLayout()
     End Sub
